@@ -17,7 +17,7 @@ if st.session_state.step == 2:
     if day:
         st.session_state.day = day
         st.session_state.step = 3
-        st.write(f"IT'S OUR ANNIV TODAY!! HAPPY ANNIVERSARY, MY {st.session_state.name}")
+        st.write(f"IT'S OUR ANNIV TODAY!! HAPPY ANNIVERSARY, MY {st.session_state.name} i love you so so much, 3yrs na tayo baby (sana naaalala mo pa ha!) let's make more happy memories together okay? at pumunta kung saan saan. Thank u for being there and my kakampi always.")
 
 # Step 3: Where do you want to go
 if st.session_state.step == 3:
