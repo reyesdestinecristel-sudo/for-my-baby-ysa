@@ -21,9 +21,9 @@ if st.session_state.step == 2:
 
 # Step 3: Where do you want to go
 if st.session_state.step == 3:
-    st.subheader("Where do you want to go today? Choose a number")
+    st.subheader("Where do you want to go today? ")
     place_option = st.radio(
-        "Pick a number:",
+        "Mhmmm, ano kaya?:",
         ["", "1. MOA", "2. Fairview", "3. At your place", "Other"]
     )
 
@@ -48,7 +48,7 @@ if st.session_state.step == 4:
     )
 
     if activity_choice == "4. Kiss, Hug, and Sex":
-        st.write("Yay okayy! Wait for me po. OTW! 🚗💨")
+        st.write("Yay okayy! Wait for me!! hahahahaha kapag ayaw masad nalang ako :(( mag cuddle nalang tayo yung matagal na matagal na matagal")
         st.session_state.step = 5  # Move to next step
     elif activity_choice in ["1. Kiss", "2. Hug", "3. Kiss and Hug"]:
         if activity_choice == "1. Kiss":
