@@ -28,18 +28,21 @@ if st.session_state.step == 3:
     )
 
     if place_option:
-        if place_option == "1. MOA":
-            st.write("Yey, let's go! Mag wear tayo ng couple shirt ha ")
-        elif place_option == "2. Fairview":
-            st.write("Okay baby, let's eat samgy and buy ice cream! ")
-        elif place_option == "3. At your place":
-            st.write("Nice choice pwede tayo mag kiss hahaha, let's order some foods and watch YOUR BELOVED KHIANNA ")
+        if place_option == "Other":
+            other_place = st.text_input("Type your place here:")
+            if other_place:
+                st.write(f"You want to go to {other_place}? Then let's go!! Good choice ❤️")
+                st.session_state.step = 4
         else:
-            st.write("You want to go there? Then let's go!! Good choice ")
+            if place_option == "1. MOA":
+                st.write("Yey, let's go! Mag wear tayo ng couple shirt ha ")
+            elif place_option == "2. Fairview":
+                st.write("Okay baby, let's eat samgy and buy ice cream! ")
+            elif place_option == "3. At your place":
+                st.write("Nice choice pwede tayo mag kiss hahaha, let's order some foods and watch YOUR BELOVED KHIANNA ")
+            st.session_state.step = 4  # Move to next step
 
-        st.session_state.step = 4  # Move to next step
-
-# Step 4: Fun activity
+# Step 4: Fun activity (cannot skip)
 if st.session_state.step == 4:
     st.subheader("Ano want mo gawin natin? hehehe")
     activity_choice = st.selectbox(
